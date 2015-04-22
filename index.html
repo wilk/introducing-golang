@@ -59,6 +59,10 @@
 
             <section>
                 <h3>Talk Aim</h3>
+                <ul>
+                    <li>Introduction to GoLang</li>
+                    <li>Gather people interested in Go</li>
+                </ul>
             </section>
         </section>
 
@@ -70,9 +74,9 @@
             <section>
                 <h3>We wanna thank...</h3>
                 <ul>
-                    <li class="fragment">TAG Milano</li>
-                    <li class="fragment">GDG Milano</li>
-                    <li class="fragment">Ibuildings</li>
+                    <li class="fragment"><img width="200px" height="200px" src="images/tag.png"/></li>
+                    <li class="fragment"><img width="200px" height="200px" src="images/gdg.png"/></li>
+                    <li class="fragment"><img width="200px" height="200px" src="images/ibuildings.png"/></li>
                 </ul>
             </section>
         </section>
@@ -110,14 +114,39 @@
 
             <section>
                 <h3>What is it?</h3>
+                <ul>
+                    <li>open source</li>
+                    <li>compiled</li>
+                    <li>statically type</li>
+                    <li>type safe</li>
+                    <li>garbage-collected</li>
+                    <li>efficient</li>
+                    <li>concurrent</li>
+                    <li>memory safe</li>
+                    <li>scalable</li>
+                    <li>simple</li>
+                    <li>fun</li>
+                </ul>
             </section>
 
             <section>
                 <h3>History</h3>
+                <ul>
+                    <li>Created by Google</li>
+                    <li>Born in 2007</li>
+                    <li>Became open source late on 2009</li>
+                    <li>First stable release 2012</li>
+                    <li>Current version (April 2015): 1.4</li>
+                </ul>
             </section>
 
             <section>
                 <h3>Authors</h3>
+                <ul>
+                    <li>Robert Griesemer</li>
+                    <li>Rob Pike</li>
+                    <li>Ken Thompson</li>
+                </ul>
             </section>
         </section>
 
@@ -127,11 +156,35 @@
             </section>
 
             <section>
-                <h3>Goals</h3>
+                <h3>Problems</h3>
+                <ul>
+                    <li>Concurrency it's still hard</li>
+                    <li>Hard to scale</li>
+                    <li>Verbosity</li>
+                    <li>Language adapted to new standards</li>
+                    <li>Possibility to switch from high-level programming to low-level</li>
+                </ul>
             </section>
 
             <section>
-                <h3>Problems</h3>
+                <h3>Why?</h3>
+                <blockquote>
+                    Go is an attempt to combine the ease of programming of an interpreted, dynamically typed language with the efficiency and safety of a statically typed, compiled language. It also aims to be modern, with support for networked and multicore computing. Finally, it is intended to be fast: it should take at most a few seconds to build a large executable on a single computer.
+                </blockquote>
+                <p><i>Go FAQs</i></p>
+            </section>
+
+            <section>
+                <h3>Goals</h3>
+                <ul>
+                    <li>Fast compiling</li>
+                    <li>Scaling with ease</li>
+                    <li>Managing dependencies like a boss</li>
+                    <li>Built-in features for concurrency</li>
+                    <li>Linear design instead of hierarchical</li>
+                    <li>Eliminate slowness</li>
+                    <li>Maintain large software systems</li>
+                </ul>
             </section>
         </section>
 
@@ -142,30 +195,73 @@
 
             <section>
                 <h3>Dependencies</h3>
+                <p>Dependencies are defined (syntactically) in the language, explicit, clear, computable:</p>
+                <pre>
+                    <code>import "fmt"</code>
+                </pre>
+                <p>Unused dependencies cause error at compile time.</p>
+                <p><b>go get</b> to download and to install dependencies.</p>
             </section>
 
             <section>
                 <h3>Packages</h3>
+                <p>In Go, a package is an interface that exposes a set of features ready to use.</p>
+                <p>Remote packages can get imported in the same way of local dependencies:</p>
+                <pre>
+                    <code>import github.com/go-martini/martini</code>
+                </pre>
             </section>
 
             <section>
                 <h3>Syntax</h3>
+                <p>Go has a clean syntax. Not super small, just clean:</p>
+                <ul>
+                    <li>regular</li>
+                    <li>only 25 keywords</li>
+                    <li>straightforward to parse (no type-specific context required)</li>
+                </ul>
             </section>
 
             <section>
                 <h3>Semantics</h3>
+                <ul>
+                    <li>statically typed</li>
+                    <li>procedural</li>
+                    <li>compiled</li>
+                    <li>pointers</li>
+                    <li>no pointer arithmetic</li>
+                    <li>no implicit numeric conversions</li>
+                    <li>concurrency</li>
+                    <li>interface types</li>
+                    <li>reflection</li>
+                </ul>
             </section>
 
             <section>
                 <h3>Concurrency</h3>
+                <p>It is part of the language, not a library.</p>
+                <p>Based on three concepts:</p>
+                <ul>
+                    <li>goroutines: lightweight threads</li>
+                    <li>channels: typed pipes used to communicate and synchronize between goroutines</li>
+                    <li>select: control structure to coordinate concurrent operations</li>
+                </ul>
             </section>
 
             <section>
                 <h3>Garbage Collection</h3>
+                <p>Go lets you limit allocation by controlling memory layout.</p>
             </section>
 
             <section>
                 <h3>Composition</h3>
+                <ul>
+                    <li>Composition over inheritance</li>
+                    <li>Inheritance breaks encapsulation</li>
+                    <li>Composition causes boilerplate to proxy all methods</li>
+                    <li>So, struct embedding (Composition + Proxy of selectors)</li>
+                    <li>Used to share implementations between different types.</li>
+                </ul>
             </section>
 
             <section>
@@ -259,6 +355,14 @@
             <section>
                 <h3>ORMs</h3>
             </section>
+        </section>
+
+        <section>
+            <h1>Thank you!</h1>
+        </section>
+
+        <section>
+            <h1>Credits</h1>
         </section>
 
         <!-- Example of nested vertical slides -->
