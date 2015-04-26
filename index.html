@@ -123,23 +123,6 @@
             </section>
 
             <section>
-                <h3>What is it?</h3>
-                <ul>
-                    <li>open source</li>
-                    <li>compiled</li>
-                    <li>statically type</li>
-                    <li>type safe</li>
-                    <li>garbage-collected</li>
-                    <li>efficient</li>
-                    <li>concurrent</li>
-                    <li>memory safe</li>
-                    <li>scalable</li>
-                    <li>simple</li>
-                    <li>fun</li>
-                </ul>
-            </section>
-
-            <section>
                 <h3>History</h3>
                 <ul>
                     <li>Created by Google</li>
@@ -166,6 +149,23 @@
                         <p>Ken Thompson</p>
                     </div>
                 </div>
+            </section>
+
+            <section>
+                <h3>What is it?</h3>
+                <ul>
+                    <li>open source</li>
+                    <li>compiled</li>
+                    <li>statically typed</li>
+                    <li>type safe</li>
+                    <li>garbage-collected</li>
+                    <li>efficient</li>
+                    <li>concurrent</li>
+                    <li>memory safe</li>
+                    <li>scalable</li>
+                    <li>simple</li>
+                    <li>fun</li>
+                </ul>
             </section>
         </section>
 
@@ -229,7 +229,9 @@
                 <p>In Go, a package is an interface that exposes a set of features ready to use.</p>
                 <p>Remote packages can get imported in the same way of local dependencies:</p>
                 <pre>
-                    <code>import "fmt"</code>
+                    <code>package main
+
+import "fmt"</code>
                 </pre>
             </section>
 
@@ -246,20 +248,18 @@
             <section>
                 <h3>Example</h3>
                 <pre>
-                    <code>
-                        package main
+                    <code>package main
 
-                        import "fmt"
+import "fmt"
 
-                        func hello(message string) {
-                            fmt.Pritln(message)
-                        }
+func hello(message string) {
+    fmt.Println(message)
+}
 
-                        func main() {
-                            go hello("Hello")
-                            go hello("World")
-                        }
-                    </code>
+func main() {
+    go hello("Hello")
+    go hello("World")
+}</code>
                 </pre>
             </section>
 
@@ -271,7 +271,6 @@
                     <li>compiled</li>
                     <li>pointers</li>
                     <li>no pointer arithmetic</li>
-                    <li>no implicit numeric conversions</li>
                     <li>concurrency</li>
                     <li>interface types</li>
                     <li>reflection</li>
@@ -287,6 +286,42 @@
                     <li>channels: typed pipes used to communicate and synchronize between goroutines</li>
                     <li>select: control structure to coordinate concurrent operations</li>
                 </ul>
+            </section>
+
+            <section>
+                <h3>Concurrency Example</h3>
+                <pre>
+                    <code>package main
+
+import (
+    "time"
+    "fmt"
+)
+
+func main() {
+    c1 := make(chan string)
+    c2 := make(chan string)
+
+    go func() {
+        time.Sleep(time.Second * 1)
+        c1 <- "one"
+    }()
+
+    go func() {
+        time.Sleep(time.Second * 2)
+        c2 <- "two"
+    }()
+
+    for i := 0; i < 2; i++ {
+        select {
+            case msg1 := <-c1:
+            fmt.Println("received", msg1)
+            case msg2 := <-c2:
+            fmt.Println("received", msg2)
+        }
+    }
+}</code>
+                </pre>
             </section>
 
             <section>
@@ -315,8 +350,6 @@
                     Philosophy:
                     Forces you think about errors—and deal with them—when they arise.
                     Errors are normal. Errors are not exceptional.
-                    Use the existing language to compute based on them.
-                    Don't need a sublanguage that treats them as exceptional.
                 </p>
             </section>
         </section>
