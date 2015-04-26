@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>GoLang Milan MeetUp - Introduction</title>
+
+    <meta name="description" content="Sad no more">
+    <meta name="author" content="Vincenzo Wilk Ferrari">
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+        <section>
+            <h1>GoLang</h1>
+
+            <h3>Sad no more</h3>
+            <p>
+                <small>Created by <a href="https://github.com/wilk">Vincenzo Wilk Ferrari</a> / <a
+                        href="http://twitter.com/__wilky__">@__wilky__</a></small>
+            </p>
+            <img style="width: 500px;" src="images/gophers5th.jpg"/>
+        </section>
+
+        <section>
+            <section>
+                <h1>Sponsors</h1>
+            </section>
+
+            <section>
+                <h3>We wanna thank...</h3>
+                <div>
+                    <img class="fragment" style="width: 200px; height: 200px; margin: 0 200px;" src="images/tag.png"/>
+                    <img class="fragment" style="width: 500px; height: 130px;" src="images/gdg.png"/>
+                    <img class="fragment" style="width: 500px; height: 130px;" src="images/ibuildings.png"/>
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h1>Welcome</h1>
+            </section>
+
+            <section>
+                <h3>Talk Aim</h3>
+                <ul>
+                    <li class="fragment">Introduction to GoLang</li>
+                    <li class="fragment">Gather people interested in Go</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h1>$ whoami</h1>
+            </section>
+
+            <section>
+                <h3>Vincenzo (Wilk) Ferrari</h3>
+                <div>
+                    <img style="width: 300px;" src="images/wilk.png"/>
+                </div>
+                <ul>
+                    <li>Fullstack Web Developer</li>
+                    <li>Software Engineer at <a href="ibuildings.it">Ibuildings Italia</a></li>
+                    <li>Open Source Supporter</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Github</h3>
+                <img style="width: 650px;" src="images/github.png"/>
+                <p><a href="https://github.com/wilk">https://github.com/wilk</a></p>
+            </section>
+
+            <section>
+                <h3>Contacts</h3>
+                <ul>
+                    <li class="fragment">Google+: <a href="https://plus.google.com/u/0/+VincenzoFerrari/">+VincenzoFerrari</a></li>
+                    <li class="fragment">Twitter: <a href="https://www.twitter.com/__wilky__">@__wilky__</a></li>
+                    <li class="fragment">LinkedIn: <a href="https://www.linkedin.com/pub/vincenzo-ferrari/49/a40/538">Vincenzo Ferrari</a></li>
+                    <li class="fragment">Stackoverflow: <a href="http://stackoverflow.com/users/916784/wilk">wilk</a></li>
+                    <li class="fragment">Coderwall: <a href="https://coderwall.com/wilk">wilk</a></li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h1>GoLang</h1>
+                <img style="width: 500px;" src="images/appenginegophercolor.jpg"/>
+            </section>
+
+            <section>
+                <h3>History</h3>
+                <ul>
+                    <li>Created by Google</li>
+                    <li>Born in 2007</li>
+                    <li>Became open source late on 2009</li>
+                    <li>First stable release 2012</li>
+                    <li>Current version (April 2015): 1.4</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Authors</h3>
+                <div>
+                    <div class="fragment" style="float: left; margin-right: 10px;">
+                        <img style="width: 250px; height: 300px;" src="images/robert.jpg" />
+                        <p>Robert Griesemer</p>
+                    </div>
+                    <div class="fragment" style="float: left; margin-right: 10px;">
+                        <img style="width: 350px; height: 300px;" src="images/rob.jpg" />
+                        <p>Rob Pike</p>
+                    </div>
+                    <div class="fragment" style="float: left; margin-right: 10px;">
+                        <img style="width: 250px; height: 300px;" src="images/thompson.jpg" />
+                        <p>Ken Thompson</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3>What is it?</h3>
+                <ul>
+                    <li>open source</li>
+                    <li>compiled</li>
+                    <li>statically typed</li>
+                    <li>type safe</li>
+                    <li>garbage-collected</li>
+                    <li>efficient</li>
+                    <li>concurrent</li>
+                    <li>memory safe</li>
+                    <li>scalable</li>
+                    <li>simple</li>
+                    <li>fun</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h1>!Reasons!</h1>
+                <img style="width: 500px;" src="images/usergroups.png"/>
+            </section>
+
+            <section>
+                <h3>Problems</h3>
+                <ul>
+                    <li>Concurrency it's still hard</li>
+                    <li>Hard to scale</li>
+                    <li>Verbosity</li>
+                    <li>Language adapted to new standards</li>
+                    <li>Possibility to switch from high-level programming to low-level</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Why?</h3>
+                <blockquote>
+                    Go is an attempt to combine the ease of programming of an interpreted, dynamically typed language with the efficiency and safety of a statically typed, compiled language. It also aims to be modern, with support for networked and multicore computing. Finally, it is intended to be fast: it should take at most a few seconds to build a large executable on a single computer.
+                </blockquote>
+                <p><i>Go FAQs</i></p>
+            </section>
+
+            <section>
+                <h3>Goals</h3>
+                <ul>
+                    <li>Fast compiling</li>
+                    <li>Scaling with ease</li>
+                    <li>Managing dependencies like a boss</li>
+                    <li>Built-in features for concurrency</li>
+                    <li>Linear design instead of hierarchical</li>
+                    <li>Eliminate slowness</li>
+                    <li>Maintain large software systems</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h1>Features</h1>
+                <img style="width: 500px;" src="images/gophercomplex1.jpg"/>
+            </section>
+
+            <section>
+                <h3>Dependencies</h3>
+                <p>Dependencies are defined (syntactically) in the language, explicit, clear, computable:</p>
+                <pre>
+                    <code>import "github.com/go-martini/martini"</code>
+                </pre>
+                <p>Unused dependencies cause error at compile time.</p>
+                <p><b>go get</b> to download and to install dependencies.</p>
+            </section>
+
+            <section>
+                <h3>Packages</h3>
+                <p>In Go, a package is an interface that exposes a set of features ready to use.</p>
+                <p>Remote packages can get imported in the same way of local dependencies:</p>
+                <pre>
+                    <code>package main
+
+import "fmt"</code>
+                </pre>
+            </section>
+
+            <section>
+                <h3>Syntax</h3>
+                <p>Go has a clean syntax. Not super small, just clean:</p>
+                <ul>
+                    <li>regular</li>
+                    <li>only 25 keywords</li>
+                    <li>straightforward to parse (no type-specific context required)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Example</h3>
+                <pre>
+                    <code>package main
+
+import "fmt"
+
+func hello(message string) {
+    fmt.Println(message)
+}
+
+func main() {
+    go hello("Hello")
+    go hello("World")
+}</code>
+                </pre>
+            </section>
+
+            <section>
+                <h3>Semantics</h3>
+                <ul>
+                    <li>statically typed</li>
+                    <li>procedural</li>
+                    <li>compiled</li>
+                    <li>pointers</li>
+                    <li>no pointer arithmetic</li>
+                    <li>concurrency</li>
+                    <li>interface types</li>
+                    <li>reflection</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Concurrency</h3>
+                <p>It is part of the language, not a library.</p>
+                <p>Based on three concepts:</p>
+                <ul>
+                    <li>goroutines: lightweight threads</li>
+                    <li>channels: typed pipes used to communicate and synchronize between goroutines</li>
+                    <li>select: control structure to coordinate concurrent operations</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Concurrency Example</h3>
+                <pre>
+                    <code>package main
+
+import (
+    "time"
+    "fmt"
+)
+
+func main() {
+    c1 := make(chan string)
+    c2 := make(chan string)
+
+    go func() {
+        time.Sleep(time.Second * 1)
+        c1 <- "one"
+    }()
+
+    go func() {
+        time.Sleep(time.Second * 2)
+        c2 <- "two"
+    }()
+
+    for i := 0; i < 2; i++ {
+        select {
+            case msg1 := <-c1:
+            fmt.Println("received", msg1)
+            case msg2 := <-c2:
+            fmt.Println("received", msg2)
+        }
+    }
+}</code>
+                </pre>
+            </section>
+
+            <section>
+                <h3>Garbage Collection</h3>
+                <p>Go lets you limit allocation by controlling memory layout.</p>
+            </section>
+
+            <section>
+                <h3>Composition</h3>
+                <ul>
+                    <li>Composition over inheritance</li>
+                    <li>Inheritance breaks encapsulation</li>
+                    <li>Composition causes boilerplate to proxy all methods</li>
+                    <li>So, struct embedding (Composition + Proxy of selectors)</li>
+                    <li>Used to share implementations between different types.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Errors</h3>
+                <p>
+                    Multiple function return values inform the design for handling errors.
+                    Go has no try-catch control structures for exceptions.
+                </p>
+                <p>
+                    Philosophy:
+                    Forces you think about errors—and deal with them—when they arise.
+                    Errors are normal. Errors are not exceptional.
+                </p>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h1>Tools</h1>
+                <img style="width: 500px;" src="images/gopherswrench.jpg"/>
+            </section>
+
+            <section>
+                <h3>gofmt</h3>
+                <p>
+                    Always intended to do automatic code formatting.
+                    Runs as a "presubmit" to the code repositories.
+                    Simplifies sharing.
+                </p>
+                <pre>
+                    <code>
+                        $ gofmt main.go
+                    </code>
+                </pre>
+            </section>
+
+            <section>
+                <h3>gofix</h3>
+                <p>
+                    Fix finds Go programs that use old APIs and rewrites them to use newer ones. After you update to a new Go release, fix helps make the necessary changes to your programs.
+                </p>
+                <pre>
+                    <code>
+                        $ go tool fix .
+                    </code>
+                </pre>
+            </section>
+
+            <section>
+                <h3>godoc</h3>
+                <p>
+                    Documentation is a huge part of making software accessible and maintainable.
+                    Philosophy: the easier it is for programmers to produce good documentation, the better for everyone.
+                    Godoc parses Go source code - including comments - and produces documentation as HTML or plain text. The end result is documentation tightly coupled with the code it documents.
+                </p>
+                <pre>
+                    <code>
+                        $ godoc fmt
+                    </code>
+                </pre>
+            </section>
+
+            <section>
+                <h3>go get</h3>
+                <p>
+                    Get downloads and installs the packages named by the import paths, along with their dependencies.
+                </p>
+                <pre>
+                    <code>
+                        $ go get
+                    </code>
+                </pre>
+            </section>
+
+            <section>
+                <h3>go build</h3>
+                <p>
+                    Build compiles the packages named by the import paths, along with their dependencies, but it does not install the results.
+                </p>
+                <pre>
+                    <code>
+                        $ go build
+                    </code>
+                </pre>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h1>Use cases</h1>
+                <img style="width: 500px;" src="images/gophermega.jpg"/>
+            </section>
+
+            <section>
+                <h3>Who uses GoLang?</h3>
+                <ul>
+                    <li>Google</li>
+                    <li>Youtube</li>
+                    <li>SoundCloud</li>
+                    <li>BBC Worldwide</li>
+                    <li>Medium</li>
+                    <li>The New York Time</li>
+                    <li>Iron.io</li>
+                    <li>Docker</li>
+                    <li>Mozilla</li>
+                    <li>Canonical</li>
+                </ul>
+                <p><i>https://github.com/golang/go/wiki/GoUsers</i></p>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h1>Motivation</h1>
+                <p>
+                    <img src="images/statistics.png"/>
+                </p>
+                <p><i>http://www.google.com/trends/explore#q=golang</i></p>
+            </section>
+
+            <section>
+                <h3>Numbers</h3>
+                <ul>
+                    <li>stackoverflow.com/questions/tagged/go : <strong>9,398 questions tagged</strong></li>
+                    <li>google.com/#q=golang : <strong>881,000 results</strong></li>
+                    <li>https://github.com/golang/go : <strong>7,704 stars</strong></li>
+                    <li>https://github.com/avelino/awesome-go : <strong>uncountable libs</strong></li>
+                    <li>https://code.google.com/p/go-wiki/wiki/Projects : <strong>uncountable projects</strong></li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h1>Libraries</h1>
+                <img style="width: 300px;" src="images/gopherswim.jpg"/>
+            </section>
+
+            <section>
+                <h3>Database Drivers</h3>
+                <p>SQL</p>
+                <ul>
+                    <li><strong>go-pgsql</strong>: PostgreSQL client</li>
+                    <li><strong>go-sql-driver/mysql</strong>: MySQL driver</li>
+                    <li><strong>go-sqlite3</strong>: SQLite3 driver</li>
+                </ul>
+                <p>No-SQL</p>
+                <ul>
+                    <li><strong>go-couchbase</strong>: Couchbase client</li>
+                    <li><strong>mgo</strong>: MongoDB driver</li>
+                    <li><strong>redis</strong>: Redis client</li>
+                    <li><strong>gomemcache</strong>: Memcache client</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>ORM</h3>
+                <ul>
+                    <li><strong>BeeDB</strong>: go ORM,support database/sql interface，pq/mysql/sqlite</li>
+                    <li><strong>gorm</strong>: The fantastic ORM library for Golang, aims to be developer friendly.</li>
+                    <li><strong>hood</strong>: Database agnostic ORM for Go</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Authentication</h3>
+                <ul>
+                    <li><strong>Go-AWS-Auth</strong>: AWS (Amazon Web Services) request signing library.</li>
+                    <li><strong>go.auth</strong>: Authentication API for Go web applications</li>
+                    <li><strong>jwt-go</strong>: Golang implementation of JSON Web Tokens (JWT).</li>
+                    <li><strong>oauth2</strong>: OAuth 2.0 package that comes with JWT, Google APIs, Compute Engine and App Engine support.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Template Engines</h3>
+                <ul>
+                    <li><strong>ace</strong>: Ace is an HTML template engine for Go, inspired by Slim and Jade.</li>
+                    <li><strong>amber</strong>: Amber is an elegant templating engine for Go Programming Language It is inspired from HAML and Jade.</li>
+                    <li><strong>mustache</strong>: A Go implementation of the Mustache template language.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Testing</h3>
+                <ul>
+                    <li><strong>testify</strong>: A sacred extension to the standard go testing package.</li>
+                    <li><strong>goblin</strong>: Mocha like testing framework fo Go</li>
+                    <li><strong>assert</strong>: Asserts to Go testing</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h1>Frameworks</h1>
+                <img style="width: 300px;" src="images/gopher.png"/>
+            </section>
+
+            <section>
+                <h3>Gorilla</h3>
+                <p>Gorilla is a web toolkit for the Go programming language.</p>
+                <p>Features:</p>
+                <ul>
+                    <li>schema: fills a struct with form values.</li>
+                    <li>context: stores values shared during a request lifetime.</li>
+                    <li>handlers: a collection of handlers for use with Go's net/http package.</li>
+                    <li>sessions: provides cookie and filesystem sessions and infrastructure for custom session backends.</li>
+                    <li>websocket: implements the WebSocket protocol defined in RFC 6455.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Martini</h3>
+                <p>Martini is a powerful package for quickly writing modular web applications/services in Golang.</p>
+                <p>Features:</p>
+                <ul>
+                    <li>Extremely simple to use.</li>
+                    <li>Awesome path matching and routing.</li>
+                    <li>Lots of good handlers/middlewares to use.</li>
+                    <li>Fully compatible with the http.HandlerFunc interface.</li>
+                    <li>Default document serving</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Beego</h3>
+                <p>beego is an open-source, high-performance web framework for the Go programming language.</p>
+                <p>Features:</p>
+                <ul>
+                    <li>RESTful support</li>
+                    <li>MVC architecture</li>
+                    <li>Modularity</li>
+                    <li>Auto API documents</li>
+                    <li>Annotation router</li>
+                    <li>Namespace</li>
+                    <li>Powerful development tools</li>
+                    <li>Full stack for Web & API</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Revel</h3>
+                <p>A high productivity, full-stack web framework for the Go language.</p>
+                <p>Features:</p>
+                <ul>
+                    <li>Code reloading</li>
+                    <li>Compile and run-time error helpful description</li>
+                    <li>Routing - Parameters parsing - validation</li>
+                    <li>Sessions</li>
+                    <li>Templating and caching</li>
+                    <li>Job running</li>
+                    <li>Testing</li>
+                    <li>i18n</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h1>Projects</h1>
+                <img style="width: 500px;" src="images/Golang.png"/>
+            </section>
+
+            <section>
+                <h3>Docker</h3>
+                <p>Docker is an open platform for developers and sysadmins to build, ship, and run distributed applications. Consisting of Docker Engine, a portable, lightweight runtime and packaging tool, and Docker Hub, a cloud service for sharing applications and automating workflows, Docker enables apps to be quickly assembled from components and eliminates the friction between development, QA, and production environments. As a result, IT can ship faster and run the same app, unchanged, on laptops, data center VMs, and any cloud.</p>
+            </section>
+
+            <section>
+                <h3>etcd</h3>
+                <p>A highly-available key value store for shared configuration and service discovery.</p>
+                <p>It's:</p>
+                <ul>
+                    <li>Simple: curl'able user facing API (HTTP+JSON)</li>
+                    <li>Secure: optional SSL client cert authentication</li>
+                    <li>Fast: benchmarked 1000s of writes/s per instance</li>
+                    <li>Reliable: properly distributed using Raft (algorithm to manage a highly-available replicated log)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>confd</h3>
+                <p>Manage local application configuration files using templates and data from etcd or consul.</p>
+                <p>It focuses on:</p>
+                <ul>
+                    <li>keeping local configuration files up-to-date using data stored in etcd, consul, or env vars and processing template resources.</li>
+                    <li>reloading applications to pick up new config file changes</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>CoreOS</h3>
+                <p>CoreOS is an open source lightweight operating system based on the Linux kernel and designed for providing infrastructure to clustered deployments, while focusing on automation, ease of applications deployment, security, reliability and scalability. As an operating system, CoreOS provides only the minimal functionality required for deploying applications inside software containers, together with built-in mechanisms for service discovery and configuration sharing.</p>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h1>Conclusion</h1>
+                <img style="width: 500px;" src="images/conclusion.jpg"/>
+            </section>
+
+            <section>
+                <h2>GoLang is/has:</h2>
+                <ul>
+                    <li>flexible, fun, readable</li>
+                    <li>fast (for computers & humans)</li>
+                    <li>clear dependencies</li>
+                    <li>clear syntax</li>
+                    <li>clear semantics</li>
+                    <li>composition not inheritance</li>
+                    <li>simplicity of model (GC, concurrency)</li>
+                    <li>easy tooling (the go tool, gofmt, godoc, gofix)</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <h1>Thank you!</h1>
+            <img style="width: 500px;" src="images/race.png"/>
+        </section>
+
+        <section>
+            <h1>Credits</h1>
+            <ul>
+                <li>https://github.com/golang/go/wiki/GoUsers</li>
+                <li>https://github.com/avelino/awesome-go</li>
+                <li>https://code.google.com/p/go-wiki/wiki/Projects</li>
+                <li>http://talks.golang.org/</li>
+            </ul>
+        </section>
+    </div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+            {
+                src: 'lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            }
+            },
+            {
+                src: 'plugin/markdown/marked.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/highlight/highlight.js', async: true, condition: function () {
+                return !!document.querySelector('pre code');
+            }, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            },
+            {src: 'plugin/zoom-js/zoom.js', async: true},
+            {src: 'plugin/notes/notes.js', async: true}
+        ]
+    });
+
+</script>
+
+</body>
+</html>
