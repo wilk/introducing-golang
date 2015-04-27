@@ -154,17 +154,17 @@
             <section>
                 <h3>What is it?</h3>
                 <ul>
-                    <li>open source</li>
-                    <li>compiled</li>
-                    <li>statically typed</li>
-                    <li>type safe</li>
-                    <li>garbage-collected</li>
-                    <li>efficient</li>
-                    <li>concurrent</li>
-                    <li>memory safe</li>
-                    <li>scalable</li>
-                    <li>simple</li>
-                    <li>fun</li>
+                    <li class="fragment">open source</li>
+                    <li class="fragment">compiled</li>
+                    <li class="fragment">statically typed</li>
+                    <li class="fragment">type safe</li>
+                    <li class="fragment">garbage-collected</li>
+                    <li class="fragment">efficient</li>
+                    <li class="fragment">concurrent</li>
+                    <li class="fragment">memory safe</li>
+                    <li class="fragment">scalable</li>
+                    <li class="fragment">simple</li>
+                    <li class="fragment">fun</li>
                 </ul>
             </section>
         </section>
@@ -178,11 +178,11 @@
             <section>
                 <h3>Problems</h3>
                 <ul>
-                    <li>Concurrency it's still hard</li>
-                    <li>Hard to scale</li>
-                    <li>Verbosity</li>
-                    <li>Language adapted to new standards</li>
-                    <li>Possibility to switch from high-level programming to low-level</li>
+                    <li class="fragment">Concurrency it's still hard</li>
+                    <li class="fragment">Hard to scale</li>
+                    <li class="fragment">Verbosity</li>
+                    <li class="fragment">Language adapted to new standards</li>
+                    <li class="fragment">Possibility to switch from high-level programming to low-level</li>
                 </ul>
             </section>
 
@@ -197,13 +197,13 @@
             <section>
                 <h3>Goals</h3>
                 <ul>
-                    <li>Fast compiling</li>
-                    <li>Scaling with ease</li>
-                    <li>Managing dependencies like a boss</li>
-                    <li>Built-in features for concurrency</li>
-                    <li>Linear design instead of hierarchical</li>
-                    <li>Eliminate slowness</li>
-                    <li>Maintain large software systems</li>
+                    <li class="fragment">Fast compiling</li>
+                    <li class="fragment">Scaling with ease</li>
+                    <li class="fragment">Managing dependencies like a boss</li>
+                    <li class="fragment">Built-in features for concurrency</li>
+                    <li class="fragment">Linear design instead of hierarchical</li>
+                    <li class="fragment">Eliminate slowness</li>
+                    <li class="fragment">Maintain large software systems</li>
                 </ul>
             </section>
         </section>
@@ -341,6 +341,31 @@ func main() {
             </section>
 
             <section>
+                <h3>Composition - Example</h3>
+                <pre>
+                    <code>package main
+
+import "fmt"
+
+type human struct {
+    gender string
+}
+
+type person struct {
+    human
+    name string
+    surname string
+}
+
+func main() {
+    foo := person{human: human{"male"}, name: "foo", surname: "bar"}
+    fmt.Println(foo.gender, foo.name, foo.surname)
+}
+                    </code>
+                </pre>
+            </section>
+
+            <section>
                 <h3>Errors</h3>
                 <p>
                     Multiple function return values inform the design for handling errors.
@@ -370,6 +395,18 @@ func main() {
                 <pre>
                     <code>
                         $ gofmt main.go
+                    </code>
+                </pre>
+            </section>
+
+            <section>
+                <h3>golint</h3>
+                <p>
+                    Golint differs from gofmt. Gofmt reformats Go source code, whereas golint prints out style mistakes.
+                </p>
+                <pre>
+                    <code>
+                        $ golint main.go
                     </code>
                 </pre>
             </section>
@@ -644,14 +681,14 @@ func main() {
             <section>
                 <h2>GoLang is/has:</h2>
                 <ul>
-                    <li>flexible, fun, readable</li>
-                    <li>fast (for computers & humans)</li>
-                    <li>clear dependencies</li>
-                    <li>clear syntax</li>
-                    <li>clear semantics</li>
-                    <li>composition not inheritance</li>
-                    <li>simplicity of model (GC, concurrency)</li>
-                    <li>easy tooling (the go tool, gofmt, godoc, gofix)</li>
+                    <li class="fragment">flexible, fun, readable</li>
+                    <li class="fragment">fast (for computers & humans)</li>
+                    <li class="fragment">clear dependencies</li>
+                    <li class="fragment">clear syntax</li>
+                    <li class="fragment">clear semantics</li>
+                    <li class="fragment">composition not inheritance</li>
+                    <li class="fragment">simplicity of model (GC, concurrency)</li>
+                    <li class="fragment">easy tooling (the go tool, gofmt, godoc, gofix)</li>
                 </ul>
             </section>
         </section>
